@@ -1,0 +1,98 @@
+Laboratorio Git. 
+1.- Entrar a su cuenta de GitHub y crear un repositorio llamado SegundoRepo
+2.- Clonar el repositorio SegundoRepo en su computadora, en la carpeta del curso
+        git clone https:/d
+3.- Ingresar al repositorio usando cd SegundoRepo
+4.- Abrir el visual studio code. Escribir code .
+5.- Crear los siguientes archivos:  alumno1.py, alumno2.py, alumno3.py, readme.md
+    touch alumno1.py
+    touch alumno2.py
+    touch alumno3.py
+    touch readme.py
+
+6.- Poner en seguimiento unicamente los archivo .py
+    git add alumno1.py
+    git add alumno2.py
+    git add alumno3.py
+ 
+
+7.- Hacer un commit con el mensaje "add alumno 1,2,3"
+    git commit -m "add alumno 1,2,3"
+  [master (root-commit) 6b76c33] add alumno 1,2,3
+   3 files changed, 3 insertions(+)
+   create mode 100644 alumno1.py
+   create mode 100644 alumno2.py
+   create mode 100644 alumno3.py
+
+ 
+
+9.- Poner en seguimiento el archivo readme.md
+    git add *.md
+ 
+
+10.-Hacer un commit con el mensaje "add readme"
+    git commit -m "add readme"
+  [master ce062a8] add readme
+   1 file changed, 0 insertions(+), 0 deletions(-)
+   create mode 100644 readme.md
+
+ 
+
+11.-Mostrar la historia del repositorio
+   git log
+  commit ce062a8ec2ac9c3fb7744a81aa2828b6dff84717 (HEAD -> 
+  master)
+  Author: Paola Hinojosa Lozano <paola.honojosalz@gmail.com
+  >
+  Date:   Wed Jul 22 11:02:23 2020 -0500
+
+    add readme
+
+  commit 6b76c33b3271b143cbf8dc73403eb2b8252acc51
+  Author: Paola Hinojosa Lozano <paola.honojosalz@gmail.com
+  >
+  Date:   Wed Jul 22 10:58:43 2020 -0500
+
+ 
+
+12.-A los archivos .py agregar a cada uno de ellos en print("hola")
+   print("hola")
+
+
+13.-Prepara los cambios de los archivos y hacer commit con el mensaje "add saludo"
+   git commit -m "add saludo"
+
+
+14.-Al archivo alumno3.py, agregarle el print("saludos")
+   git status
+ On branch master
+ Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+ Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   alumno3.py
+
+ no changes added to commit (use "git add" and/or "git commit -a")
+
+15.-Preparar el archivo3.py para hacer commit
+   git commit -m "alumno3"
+ [master e6af5e7] alumno3
+  1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+16.-Quita el archivo3.py del area de preparacion
+   git reset alumno3.py
+
+
+17.-Restaura el archivo3.py descartando los cambios hechos.
+   git add alumno3.py
+   git status
+ On branch master
+ Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+ Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)      
+        modified:   alumno3.py
